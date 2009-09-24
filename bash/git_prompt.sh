@@ -49,7 +49,7 @@ function git_user_initials {
 
 function prompt_func() {
     previous_return_value=$?;
-    prompt="${TITLEBAR}${COLOR_NONE}[${COLOR_NONE}\W${GREEN}$(git_branch_and_user)${COLOR_NONE}]${COLOR_NONE} "
+    prompt="${TITLEBAR}${COLOR_NONE}[${COLOR_NONE}\W${GREEN}${RUBY_VER}:$(git_branch_and_user)${COLOR_NONE}]${COLOR_NONE} "
 
     if test $previous_return_value -eq 0
     then
