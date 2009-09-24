@@ -87,7 +87,6 @@ function install_ruby_191 {
   use_ruby_191 && install_rubygems_from_source "1.3.5" && install_rake && popd
 }
 
-
 function use_ruby_186 {
  export MY_RUBY_HOME=~/.ruby_versions/ruby-1.8.6-p369
  export GEM_HOME=~/.gem/ruby/1.8
@@ -165,4 +164,4 @@ function display_ruby_version {
  export RPS1=$RUBY_VERSION
 }
 
-use_leopard_ruby
+use_ree_186
