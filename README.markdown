@@ -6,12 +6,10 @@ A grab bag of scripts, aliases, config files, and other random stuff to be produ
 
 Learn more: [Relevance Blog](http://blog.thinkrelevance.com/2009/7/29/ruby-switcher-working-with-multiple-ruby-versions-has-never-been-this-easy)
 
-##Getting Started
-
-
 ##Prerequisites
 
 Ubuntu: `sudo apt-get update && sudo apt-get install build-essential zlib1g-dev libreadline5-dev libssl-dev`
+
 OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
 
 ##Download
