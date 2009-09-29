@@ -58,7 +58,7 @@ function use_ree_186 {
  export MY_RUBY_HOME=~/.ruby_versions/ruby-enterprise-1.8.6-20090610
  export GEM_HOME=~/.gem/ruby-enterprise/1.8
  export GEM_PATH=~/.gem/ruby-enterprise/1.8
- export RUBY_VER=ree1.8.6
+ export RUBY_VER=ree-1.8.6
  update_path
 }
 
@@ -78,6 +78,31 @@ function install_ree_186 {
   popd
 }
 
+function use_ree_187 {
+ export MY_RUBY_HOME=~/.ruby_versions/ruby-enterprise-1.8.7-20090928
+ export GEM_HOME=~/.gem/ruby-enterprise-1.8.7-20090928/1.8
+ export GEM_PATH=~/.gem/ruby-enterprise-1.8.7-20090928/1.8
+ export RUBY_VER=ree-1.8.7
+ update_path
+}
+
+function install_ree_187 {
+  echo "Clearing RUBYOPT environment variable. Was set to '$RUBYOPT'."
+  export RUBYOPT=
+
+  mkdir -p ~/tmp && mkdir -p ~/.ruby_versions &&
+  pushd ~/tmp
+  curl --silent -L -O http://rubyforge.org/frs/download.php/58677/ruby-enterprise-1.8.7-20090928.tar.gz &&
+  tar xzf ruby-enterprise-1.8.7-20090928.tar.gz &&
+  cd ruby-enterprise-1.8.7-20090928 &&
+  ./installer -a $HOME/.ruby_versions/ruby-enterprise-1.8.7-20090928 --dont-install-useful-gems &&
+  cd ~/tmp &&
+  rm -rf ~/tmp/ruby-enterprise-1.8.7-20090928 ruby-enterprise-1.8.7-20090928.tar.gz &&
+  use_ree_186 && install_rubygems_from_source "1.3.5" && install_rake &&
+  popd
+}
+
+
 function use_ruby_191 {
  export MY_RUBY_HOME=~/.ruby_versions/ruby-1.9.1-p243
  export GEM_HOME=~/.gem/ruby/1.9.1
@@ -93,8 +118,8 @@ function install_ruby_191 {
 
 function use_ruby_185 {
  export MY_RUBY_HOME=~/.ruby_versions/ruby-1.8.5-p231
- export GEM_HOME=~/.gem/ruby/1.8.5
- export GEM_PATH=~/.gem/ruby/1.8.5
+ export GEM_HOME=~/.gem/ruby-1.8.5/1.8
+ export GEM_PATH=~/.gem/ruby-1.8.5/1.8
  export RUBY_VER=1.8.5
  update_path
 }
