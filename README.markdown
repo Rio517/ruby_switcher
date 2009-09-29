@@ -6,13 +6,13 @@ A grab bag of scripts, aliases, config files, and other random stuff to be produ
 
 Learn more: [Relevance Blog](http://blog.thinkrelevance.com/2009/7/29/ruby-switcher-working-with-multiple-ruby-versions-has-never-been-this-easy)
 
-##Prerequisites
+###Prerequisites
 
 Ubuntu: `sudo apt-get update && sudo apt-get install build-essential zlib1g-dev libreadline5-dev libssl-dev`
 
 OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
 
-##Download
+###Download
     cd
     curl -O -L http://github.com/Rio517/etc/blob/master/bash/ruby_switcher.sh
     echo "source ~/ruby_switcher.sh" >> .bash_profile
@@ -26,7 +26,7 @@ OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
     <th>Use It</th>
   </tr>
   <tr>
-    <td>[default on 0S X</td>
+    <td>[default on 0S X]</td>
     <td>use_leopard_ruby</td>
   </tr>
   <tr>
@@ -40,6 +40,10 @@ OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
   <tr>
     <td>install_ree_186</td>
     <td>use_ree_186</td>
+  </tr>
+<tr>
+    <td>install_ree_187</td>
+    <td>use_ree_187</td>
   </tr>
   <tr>
     <td>install_ruby_187</td>
