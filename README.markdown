@@ -14,7 +14,7 @@ OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
 
 ###Download
     cd
-    curl -O -L http://github.com/Rio517/etc/blob/master/bash/ruby_switcher.sh
+    curl -O -L http://github.com/Rio517/etc/raw/master/bash/ruby_switcher.sh
     echo "source ~/ruby_switcher.sh" >> .bash_profile
     source .bash_profile
 
