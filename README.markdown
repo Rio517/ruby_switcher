@@ -30,10 +30,6 @@ OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
     <td>use_leopard_ruby</td>
   </tr>
   <tr>
-    <td>install_ruby_185</td>
-    <td>use_ruby_185</td>
-  </tr>
-  <tr>
     <td>install_ruby_186</td>
     <td>use_ruby_186</td>
   </tr>
