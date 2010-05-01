@@ -188,4 +188,4 @@ function display_ruby_version {
  export RPS1=$RUBY_VERSION
 }
 
-use_ree_186
+use_ree_187
