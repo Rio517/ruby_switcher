@@ -1,8 +1,6 @@
-# Relevance Etc
-
-A grab bag of scripts, aliases, config files, and other random stuff to be productive.  Most everything assumes bash, and there are also some Mac OS X specific things.
-
 #Ruby Switcher
+
+This is a dedicated repo for the ruby_switcher originally put together by the team over at http://thinkrelavance.com
 
 Learn more: [Relevance Blog](http://blog.thinkrelevance.com/2009/7/29/ruby-switcher-working-with-multiple-ruby-versions-has-never-been-this-easy)
 
