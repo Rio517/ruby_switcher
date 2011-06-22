@@ -211,4 +211,4 @@ function display_ruby_version {
  export RPS1=$RUBY_VERSION
 }
 
-use_ree_192
+use_ruby_192
