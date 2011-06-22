@@ -65,6 +65,7 @@ function use_ree_186 {
 function install_ree_186 {
   echo "Clearing RUBYOPT environment variable. Was set to '$RUBYOPT'."
   export RUBYOPT=
+  export RUBYLIB=
 
   mkdir -p ~/tmp && mkdir -p ~/.ruby_versions &&
   pushd ~/tmp
@@ -79,47 +80,53 @@ function install_ree_186 {
 }
 
 function use_ree_187 {
-  export MY_RUBY_HOME=~/.ruby_versions/ruby-enterprise-1.8.7-2009.10
+  export MY_RUBY_HOME=~/.ruby_versions/ruby-enterprise-1.8.7-2011.03
   export GEM_HOME=~/.gem/ruby/1.8.7
   export GEM_PATH=~/.gem/ruby/1.8.7
   update_path
 }
 
 function install_ree_187 {
+  echo "Clearing RUBYOPT environment variable. Was set to '$RUBYOPT'."
+  export RUBYOPT=
+  export RUBYLIB=
+
   mkdir -p ~/tmp && mkdir -p ~/.ruby_versions && pushd ~/tmp
-  curl --silent -L -O http://rubyforge.org/frs/download.php/66162/ruby-enterprise-1.8.7-2009.10.tar.gz &&
-  tar xzf ruby-enterprise-1.8.7-2009.10.tar.gz && cd ruby-enterprise-1.8.7-2009.10 &&
-  ./installer -a $HOME/.ruby_versions/ruby-enterprise-1.8.7-2009.10 &&
-  cd ~/tmp && rm -rf ~/tmp/ruby-enterprise-1.8.7-2009.10 ruby-enterprise-1.8.7-2009.10.tar.gz &&
+  curl --silent -L -O http://rubyforge.org/frs/download.php/66162/ruby-enterprise-1.8.7-2011.03.tar.gz &&
+  tar xzf ruby-enterprise-1.8.7-2011.03.tar.gz && cd ruby-enterprise-1.8.7-2011.03 &&
+  ./installer -a $HOME/.ruby_versions/ruby-enterprise-1.8.7-2011.03 &&
+  cd ~/tmp && rm -rf ~/tmp/ruby-enterprise-1.8.7-2011.03 ruby-enterprise-1.8.7-2011.03.tar.gz &&
   use_ree_187 && install_rubygems_from_source "1.3.7" && install_rake &&
   popd
 }
 
 
 function use_ruby_191 {
- export MY_RUBY_HOME=~/.ruby_versions/ruby-1.9.1-p243
- export GEM_HOME=~/.gem/ruby/1.9.1
+ export MY_RUBY_HOME=~/.ruby_versions/ruby-1.9.1-p378
+ export GEM_HOME=~/.gem/ruby/1.9.1	
  export GEM_PATH=~/.gem/ruby/1.9.1
  export RUBY_VER=1.9.1
  update_path
 }
 
 function install_ruby_191 {
-  install_ruby_from_source "1.9" "1" "243" &&
-  use_ruby_191 && install_rubygems_from_source "1.3.7" && install_rake && popd
+  install_ruby_from_source "1.9" "1" "378" &&
+  use_ruby_191 #&& install_rubygems_from_source "1.3.7"   #rubygem is included by default in 1.9.1 and later
+  && install_rake && popd
 }
 
-
 function use_ruby_192 {
- export MY_RUBY_HOME=~/.ruby_versions/ruby-1.9.2-p0
+ export MY_RUBY_HOME=~/.ruby_versions/ruby-1.9.2-p378
  export GEM_HOME=~/.gem/ruby/1.9.2
  export GEM_PATH=~/.gem/ruby/1.9.2
+ export RUBY_VER=1.9.1
  update_path
 }
 
 function install_ruby_192 {
-  install_ruby_from_source "1.9" "2" "0" &&
-  use_ruby_192 && install_rubygems_from_source "1.3.7" && install_rake && popd
+  install_ruby_from_source "1.9" "2" "180" &&
+  use_ruby_192 #&& install_rubygems_from_source "1.3.7"    #rubygem is included by default in 1.9.1 and later
+  && install_rake && popd
 }
 
 function use_ruby_186 {
@@ -136,7 +143,7 @@ function install_ruby_186 {
 }
 
 function use_ruby_187 {
- export MY_RUBY_HOME=~/.ruby_versions/ruby-1.8.7-p174
+ export MY_RUBY_HOME=~/.ruby_versions/ruby-1.8.7-p334
  export GEM_HOME=~/.gem/ruby/1.8
  export GEM_PATH=~/.gem/ruby/1.8
  export RUBY_VER=1.8.7
@@ -144,11 +151,15 @@ function use_ruby_187 {
 }
 
 function install_ruby_187 {
-  install_ruby_from_source "1.8" "7" "174" &&
+  install_ruby_from_source "1.8" "7" "334" &&
   use_ruby_187 && install_rubygems_from_source "1.3.7" && install_rake && popd
 }
 
 function install_ruby_from_source {
+  export MY_RUBY_HOME=
+  export GEM_HOME=
+  export GEM_PATH=
+  export RUBY_VER=
   local ruby_major=$1
   local ruby_minor=$2
   local patch_level=$3
