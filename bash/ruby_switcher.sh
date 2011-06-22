@@ -1,4 +1,4 @@
-export ORIGINAL_PATH=$PATH
+	export ORIGINAL_PATH=$PATH
 
 function use_leopard_ruby {
  export MY_RUBY_HOME=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr
@@ -111,8 +111,7 @@ function use_ruby_191 {
 
 function install_ruby_191 {
   install_ruby_from_source "1.9" "1" "378" &&
-  use_ruby_191 #&& install_rubygems_from_source "1.3.7"   #rubygem is included by default in 1.9.1 and later
-  && install_rake && popd
+  use_ruby_191 && install_rake && popd #&& install_rubygems_from_source "1.3.7"   #rubygem is included by default in 1.9.1 and later
 }
 
 function use_ruby_192 {
@@ -125,8 +124,8 @@ function use_ruby_192 {
 
 function install_ruby_192 {
   install_ruby_from_source "1.9" "2" "180" &&
-  use_ruby_192 #&& install_rubygems_from_source "1.3.7"    #rubygem is included by default in 1.9.1 and later
-  && install_rake && popd
+  use_ruby_192 && install_rake && popd #&& install_rubygems_from_source "1.3.7"    #rubygem is included by default in 1.9.1 and later
+
 }
 
 function use_ruby_186 {
@@ -212,4 +211,4 @@ function display_ruby_version {
  export RPS1=$RUBY_VERSION
 }
 
-use_ree_187
+use_ree_192
