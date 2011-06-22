@@ -6,14 +6,14 @@ Learn more: [Relevance Blog](http://blog.thinkrelevance.com/2009/7/29/ruby-switc
 
 ###Prerequisites
 
-Ubuntu: `sudo apt-get update && sudo apt-get install build-essential zlib1g-dev libreadline5-dev libssl-dev`
+Ubuntu: `	`
 
 OS X: [Xcode](http://developer.apple.com/technology/Xcode.html)
 
 ###Download
     cd
-    curl -O -L http://github.com/Rio517/etc/raw/master/bash/ruby_switcher.sh
-    echo "source ~/ruby_switcher.sh" >> .bash_profile (or .bashrc in ubuntu)
+    curl -O -L https://raw.github.com/Rio517/ruby_switcher/master/bash/ruby_switcher.sh
+    echo "source ~/ruby_switcher.sh" >> .bashrc (or .bashrc in ubuntu)
     source .bash_profile  (or .bashrc in ubuntu)
 
 #Usage
